@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Torch</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login/style.css'%}">
+</head>
+<body>
+	<div id="login">
+		<img src="../static/login/torch.png">
+		<br>
+			{% if messages %}
+			<ul class="messages">
+			    {% for message in messages %}
+			    <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red;">{{ message }}</li>
+			    {% endfor %}
+			</ul>
+			{% endif %}
+
+		<h3>Login Here!</h3>
+
+			<form action="{% url 'logging' %}" method="POST"> {% csrf_token%}
+				{{login_form}}
+				<input type="submit" value="Login">
+			</form>
+		<h3>Register Here!</h3>
+			<form action="{% url 'reggy' %}" method="POST"> {% csrf_token %}
+				{{user_form}}
+				<input type="submit" value="Login">
+			</form>
+		<br>
+		<h4>log in with:</h4>
+		<img class="icon" src="../static/login/twitter.png" alt="Twitter">
+
+	
+	
+	</div>
+
+	
+</body>
+</html>

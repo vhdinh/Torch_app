@@ -1,0 +1,41 @@
+* {
+	font-family: arial;
+	background-color: #FAFAFA;
+}
+#login {
+	left: 10%;
+	position: absolute;
+	text-align: center;
+}
+
+img {
+	background-color: #FAFAFA;
+	size: 50%;
+}
+
+h3{
+	color: blue;
+	display: inline-block;
+}
+
+span {
+	padding-left: 15px;
+	float: right;
+	font-size: 12px;
+}
+
+#login p {
+	display: inline-block;
+	width: 100px;
+}
+#torch {
+	font-size: 18px
+}
+#torch input {
+	width: 50%;
+	height: 25px;
+}
+
+#login ul {
+	list-style-type: none;
+}
